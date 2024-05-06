@@ -1,0 +1,106 @@
+.line {
+  @include adaptiveFull('padding-bottom', 120, 80, 60);
+}
+.line__title {
+  color: #F9B134;
+  @include adaptiveFull('margin-bottom', 60, 40, 30);
+}
+.line__slider-wrapper {
+  position: relative;
+
+  .swiper-controls {
+    align-items: center;
+    justify-content: center;
+
+    @include vp-1023 {
+      padding: 27px 0;
+      display: flex;
+    }
+  }
+  .swiper-navigation-btn {
+    width: 40px;
+    height: 40px;
+    background-image: url('../img/content/arrow-big.svg');
+    background-size: cover;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    @include adaptiveFull('left', 30, 10, 10);
+
+    &--prev {
+      transform: translateY(-50%) rotate(180deg);
+    }
+    &--next {
+      left: unset!important;
+      @include adaptiveFull('right', 30, 10, 10);
+    }
+
+    &.swiper-button-disabled {
+      opacity: 0.5;
+    }
+
+    @include vp-1023 {
+      width: 21px;
+      height: 25px;
+      background-image: url('../img/content/arrow.svg');
+      position: static;
+      transform: unset;
+
+      &--prev {
+        transform: rotate(180deg);
+      }
+    }
+  }
+  .swiper-pagination {
+    position: static;
+    width: fit-content;
+    height: 8px;
+    margin: 0 40px;
+    display: none;
+
+    &-bullet {
+      &-active {
+        background-color: #57504C;
+      }
+    }
+
+    @include vp-1023 {
+      display: flex;
+    }
+  }
+}
+.line__slider {
+  @include vp-1023 {
+    @include adaptiveFull('padding-left', 100, 60, 40);
+    @include adaptiveFull('padding-right', 100, 60, 40);
+    @include adaptiveFull('margin-left', -100, -60, -40);
+    @include adaptiveFull('margin-right', -100, -60, -40);
+  }
+
+  .swiper {
+  }
+  .swiper-wrapper {
+    
+  }
+  .swiper-slide {
+  }
+}
+.line__slide {
+  padding: 32px;
+  border: 1px solid #ECE9E2;
+  height: auto;
+
+  &.is-active {
+    border: 2px solid #F9B134;
+  }
+}
+.line__slide-photo {
+  margin-bottom: 26px;
+}
+.line__slide-name {
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
+  margin-top: auto;
+}

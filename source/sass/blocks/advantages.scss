@@ -1,0 +1,49 @@
+.advantages {
+  @include adaptiveFull('padding-top', 30, 23, 23);
+  @include adaptiveFull('padding-bottom', 30, 23, 23);
+  background-color: #92C465;
+  color: $color-default-white;
+  overflow: hidden;
+}
+.advantages__slider {
+  position: relative;
+
+  .swiper {
+  }
+  .swiper-wrapper {
+    align-items: center;
+  }
+  .swiper-slide {
+  }
+  .swiper-navigation {
+  }
+  .swiper-navigation-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    @include adaptiveFull('width', 60, 60, 40);
+    @include adaptiveFull('height', 60, 60, 40);
+    background-image: url('../img/content/navigation-btn.svg');
+    background-size: cover;
+    z-index: 1;
+
+    &--next {
+      right: 0;
+    }
+  }
+}
+.advantages__slide {
+  display: flex;
+  align-items: center;
+}
+.advantages__slide-icon {
+  @include adaptiveFull('margin-right', 20, 10, 10);
+  @include adaptiveFull('width', 80, 54, 54);
+}
+.advantages__slide-text {
+  @include adaptiveFull('font-size', 20, 14, 14);
+  
+  @include vp-767 {
+    max-width: 60%;
+  }
+}

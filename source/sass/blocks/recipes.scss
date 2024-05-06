@@ -1,0 +1,104 @@
+.recipes {
+  @include adaptiveFull('padding-top', 60, 40, 30);
+  @include adaptiveFull('padding-bottom', 100, 60, 40);
+  overflow: hidden;
+
+  .container {
+    display: grid;
+    grid-template-columns: 0.9fr 2fr;
+    @include adaptiveFull('gap', 150, 40, 30);
+
+    @include vp-1023 {
+      grid-template-columns: auto;
+    }
+  }
+}
+.recipes__tags-wrapper {
+}
+.recipes__tags-title {
+  margin: 0;
+  @include adaptiveFull('margin-bottom', 45, 40, 20);
+}
+.recipes__tags {
+  @include reset-list;
+
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  height: fit-content;
+  @include adaptiveFull('margin', -15, -10, -10);
+}
+.recipes__tag {
+  @include adaptiveFull('margin', 15, 10, 10);
+}
+.recipes__tag-link {
+  text-transform: uppercase;
+  opacity: 0.5;
+  transition: $trans-default;
+
+  &.is-active {
+    opacity: 1;
+    text-decoration: underline;
+  }
+
+  @include hover-focus {
+    opacity: 1;
+    text-decoration: underline;
+  }
+}
+.recipes__cards {
+  @include reset-list;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  @include adaptiveFull('gap', 40, 20, 20);
+  @include adaptiveFull('margin-right', -100, -60, -40);
+
+  @media screen and (min-width: 1920px) {
+    margin-right: var(--margin-width);
+  }
+
+  @include vp-1023 {
+    margin-right: 0;
+  }
+
+  @include vp-767 {
+    grid-template-columns: auto;
+  }
+}
+.recipes__card {
+  background: #ECE9E2;
+}
+.recipes__card-link {
+}
+.recipes__card-photo {
+  width: 100%;
+  object-fit: cover;
+}
+.recipes__card-text {
+  padding: 20px;
+  @include adaptiveFull('padding-left', 40, 20, 20);
+  @include adaptiveFull('padding-right', 40, 20, 20);
+}
+.recipes__card-title {
+  margin: 0 0 20px;
+}
+.recipes__card-info {
+  display: flex;
+  align-items: center;
+}
+.recipes__card-info-item {
+  display: flex;
+  align-items: center;
+
+  &:not(:last-child) {
+    @include adaptiveFull('margin-right', 50, 20, 10);
+  }
+}
+.recipes__card-info-item-icon {
+  margin-right: 10px;
+  @include adaptiveFull('width', 40, 35, 35);
+}
+.recipes__card-info-item-name {
+  @include adaptiveFull('font-size', 16, 14, 14);
+}

@@ -3,7 +3,7 @@
 <head>
 
   @@include("source/html/base/head.html")
-  <title>ProjectName — Главная</title>
+  <title>Сыробогатов — Главная</title>
 
 </head>
 <body>
@@ -13,16 +13,30 @@
   </div>
 
   <div class="wrapper">
-    <-- для внутренних страниц используйте "headerActiveLinkIndex": 0\1\2 --> 
-    @@include("source/html/base/header.html", {
-      "index": true
-    })
+    @@include("source/html/base/header.html")
 
     <main>
-      <div class="container">
-        <p><a href="#" data-open-modal="feedback">modal--feedback link</a></p>
-        <p><a href="#" data-open-modal="success">modal--success link</a></p>
-      </div>
+      @@include("source/html/components/banner.html")
+
+      @@include("source/html/components/advantages.html")
+
+      @@include("source/html/components/why.html")
+
+      @@include("source/html/components/about.html")
+
+      @@include("source/html/components/main-catalog.html")
+
+      @@include("source/html/components/main-recipes.html")
+
+      @@include("source/html/components/production.html")
+
+      @@include("source/html/components/advantages-1.html")
+
+      @@include("source/html/components/where.html")
+
+      @@include("source/html/components/products.html")
+
+      @@include("source/html/components/contacts.html")
     </main>
 
     @@include("source/html/base/footer.html")

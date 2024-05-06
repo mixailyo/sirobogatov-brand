@@ -1,0 +1,116 @@
+.main-catalog {
+  overflow: hidden;
+}
+.main-catalog__slider {
+  .swiper {
+  }
+  .swiper-wrapper {
+  }
+  .swiper-slide {
+  }
+  .swiper-controls {
+    align-items: center;
+    justify-content: center;
+    padding: 27px 0;
+    display: none;
+
+    @include vp-1023 {
+      display: flex;
+    }
+  }
+  .swiper-navigation-btn {
+    width: 21px;
+    height: 25px;
+    background-image: url('../img/content/arrow.svg');
+    background-size: cover;
+
+    &--prev {
+      transform: rotate(180deg);
+    }
+    &--next {
+    }
+
+    &.swiper-button-disabled {
+      opacity: 0.5;
+    }
+  }
+  .swiper-pagination {
+    position: static;
+    width: fit-content;
+    height: 8px;
+    margin: 0 40px;
+    display: flex;
+
+    &-bullet {
+      &-active {
+        background-color: #57504C;
+      }
+    }
+  }
+}
+.main-catalog__item {
+  background-color: #ECE9E2;
+  position: relative;
+
+  &:nth-child(1) {
+    .main-catalog__item-hover {
+      background-color: #F9B134;
+    }
+  }
+  &:nth-child(2) {
+    .main-catalog__item-hover {
+      background-color: #87BBE3;
+    }
+  }
+  &:nth-child(3) {
+    .main-catalog__item-hover {
+      background-color: #92C465;
+    }
+  }
+  &:nth-child(4) {
+    .main-catalog__item-hover {
+      background-color: #EB5756;
+    }
+  }
+
+  &:hover {
+    .main-catalog__item-hover {
+      opacity: 1;
+    }
+  }
+}
+.main-catalog__item-title {
+  margin: 0;
+  padding: 40px;
+  @include adaptiveFull('padding', 40, 24, 24);
+}
+.main-catalog__item-photo {
+  min-width: 100%;
+}
+.main-catalog__item-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  color: $color-default-white;
+  transition: $trans-default;
+  opacity: 0;
+
+}
+.main-catalog__item-description {
+  padding-top: 0;
+  @include adaptiveFull('padding-right', 40, 24, 24);
+  @include adaptiveFull('padding-left', 40, 24, 24);
+  @include adaptiveFull('padding-bottom', 40, 24, 24);
+  @include adaptiveDesktopToMobile('font-size', 20, 13);
+}
+.main-catalog__item-link {
+  width: fit-content;
+  margin-top: auto;
+  @include adaptiveFull('margin-right', 40, 24, 24);
+  @include adaptiveFull('margin-left', 40, 24, 24);
+  @include adaptiveFull('margin-bottom', 60, 32, 24);
+}

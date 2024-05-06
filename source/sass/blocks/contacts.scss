@@ -1,0 +1,120 @@
+.contacts {
+  overflow: hidden;
+  
+  .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    @include vp-1279 {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}
+.contacts__video-wrapper {
+  position: relative;
+  @include adaptiveFull('margin-left', -100, -60, -40);
+
+  @media screen and (min-width: 1920px) {
+    margin-left: var(--margin-width);
+  }
+
+  &.is-active {
+    .contacts__video-preview {
+      opacity: 0;
+      pointer-events: none;
+    }
+  }
+
+  @include vp-1279 {
+    @include adaptiveFull('margin-right', -100, -60, -40);
+  }
+
+  @include vp-767 {
+    min-height: 450px;
+  }
+}
+.contacts__video-preview {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  cursor: pointer;
+  z-index: 1;
+  transition: $trans-default;
+}
+.contacts__video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.contacts__wrapper {
+}
+.contacts__top {
+  @include adaptiveFull('padding-left', 100, 60, 60);
+  @include adaptiveFull('padding-top', 100, 60, 60);
+  @include adaptiveFull('padding-bottom', 84, 60, 60);
+
+  @include vp-1279 {
+    padding-left: 0!important;
+    max-width: 500px;
+  }
+}
+.contacts__title {
+  margin: 0 0 var(--default-margin);
+}
+.contacts__list {
+  @include reset-list;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+
+  @include vp-767 {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.contacts__item {
+  &--email {
+    text-decoration: underline;
+  }
+  &--phone {
+    @include adaptiveDesktopToMobile('font-size', 24, 20);
+  }
+  &--main {
+    @include adaptiveDesktopToMobile('font-size', 30, 26);
+  }
+}
+.contacts__item-title {
+  @include adaptiveDesktopToMobile('font-size', 18, 16);
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.contacts__item-value {
+}
+.contacts__form {
+  background: #ECE9E2;
+  @include adaptiveFull('margin-right', -100, -60, -40);
+  @include adaptiveFull('padding-right', 100, 60, 40);
+  @include adaptiveFull('padding-top', 72, 50, 50);
+  @include adaptiveFull('padding-bottom', 72, 50, 50);
+
+  @media screen and (min-width: 1280px) {
+    @include adaptiveFull('padding-left', 100, 60, 60);
+  }
+
+  @media screen and (min-width: 1920px) {
+    margin-right: var(--margin-width);
+  }
+
+  @include vp-1279 {
+    @include adaptiveFull('margin-left', -100, -60, -40);
+    @include adaptiveFull('padding-left', 100, 60, 40);
+    
+    form {
+      max-width: 500px;
+    }
+  }
+}

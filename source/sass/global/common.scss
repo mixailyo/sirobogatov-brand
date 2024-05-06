@@ -1,0 +1,39 @@
+.title {
+  &-h1 {
+    @include adaptiveFull('font-size', 80, 64, 39);
+    font-weight: 500;
+    margin: 0;
+  }
+  &-h2 {
+    @include adaptiveFull('font-size', 40, 30, 24);
+    line-height: 1.3;
+    font-weight: 400;
+    margin: 0;
+  }
+  &-h3 {
+    @include adaptiveFull('font-size', 24, 18, 18);
+    font-weight: 500;
+    margin: 0;
+    text-transform: uppercase;
+  }
+  &-h4 {
+    @include adaptiveFull('font-size', 36, 36, 28);
+    font-weight: 500;
+    margin: 0;
+  }
+  &-h5 {
+    @include adaptiveFull('font-size', 24, 24, 20);
+    font-weight: 500;
+    margin: 0;
+  }
+}
+
+.text {
+  &-norm {
+    @include adaptiveFull('font-size', 18, 14, 14);
+  }
+}
+
+.margin-top-auto {
+  margin-top: auto;
+}

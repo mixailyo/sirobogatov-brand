@@ -1,0 +1,117 @@
+.detail {
+  @include adaptiveFull('padding-bottom', 100, 80, 60);
+  overflow: hidden;
+
+  .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    @include adaptiveFull('row-gap', 40, 40, 30);
+    @include adaptiveFull('column-gap', 150, 85, 0);
+
+    @include vp-1279 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include vp-767 {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}
+.detail__title {
+  font-weight: 500;
+  grid-column: span 3;
+
+  @include vp-1279 {
+    grid-column: span 2;
+  }
+
+  @include vp-767 {
+    grid-column: span 1;
+  }
+}
+.detail__info {
+  @include vp-1279 {
+    grid-column: span 2;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    @include adaptiveFull('column-gap', 85, 85, 0);
+  }
+
+  @include vp-767 {
+    grid-column: span 1;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.detail__division {
+  font-weight: 500;
+  margin-bottom: 20px;
+
+  @include vp-1279 {
+    grid-column: span 2;
+  }
+
+  @include vp-767 {
+    grid-column: span 1;
+  }
+}
+.detail__description {
+  @include adaptiveFull('margin-bottom', 40, 30, 30);
+}
+.detail__indicators {
+}
+.detail__indicator {
+  display: flex;
+  justify-content: space-between;
+
+  &:not(:last-child) {
+    margin-bottom: 5px;
+  }
+}
+.detail__indicator-name {
+}
+.detail__indicator-value {
+  margin-right: 15px;
+}
+.detail__slider {
+  @include adaptiveFull('width', 500, 350, 300);
+  padding-bottom: 50px;
+
+  .swiper {
+  }
+  .swiper-wrapper {
+  }
+  .swiper-slide {
+  }
+  .swiper-pagination {
+    &-bullet {
+      &-active {
+        background-color: #57504C;
+      }
+    }
+  }
+}
+.detail__slide {
+}
+.detail__slide-photo {
+}
+.detail__more {
+}
+.detail__advantages {
+  @include adaptiveFull('margin-bottom', 80, 80, 45);
+}
+.detail__advantage {
+  display: flex;
+  align-items: center;
+
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
+.detail__advantage-icon {
+  margin-right: 20px;
+}
+.detail__advantage-name {
+}
+.detail__recipes {
+  min-width: 240px;
+}

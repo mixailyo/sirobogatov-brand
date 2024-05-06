@@ -1,0 +1,110 @@
+.filters {
+  @include adaptiveFull('padding-bottom', 55, 30, 30);
+}
+.filters__main {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  @include adaptiveFull('margin-bottom', 55, 30, 30);
+
+  @include vp-1023 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2px;
+  }
+
+  @include vp-767 {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1px;
+  }
+}
+.filters__main-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  @include adaptiveFull('padding-top', 20, 14, 5);
+  @include adaptiveFull('padding-bottom', 20, 14, 5);
+  @include adaptiveFull('padding-left', 40, 20, 20);
+  @include adaptiveFull('padding-right', 40, 20, 20);
+  background-color: #ECE9E2;
+  transition: $trans-default;
+
+  &:not(:last-child) {
+    border-right: 1px solid $color-default-white;
+  }
+  
+  &:nth-child(1) {
+    --main-color: #F9B134;
+  }
+
+  &:nth-child(2) {
+    --main-color: #87BBE3;
+  }
+
+  &:nth-child(3) {
+    --main-color: #92C465;
+  }
+
+  &:nth-child(4) {
+    --main-color: #EB5756;
+  }
+
+  &.is-active,
+  &:hover {
+    background-color: var(--main-color);
+    color: $color-default-white
+  }
+
+  @include vp-1023 {
+    @include adaptiveFull('padding-left', 100, 60, 40);
+    @include adaptiveFull('padding-right', 100, 60, 40);
+
+    &:not(:last-child) {
+      border: unset;
+    }
+  }
+}
+.filters__main-item-name {
+  @include adaptiveFull('font-size', 24, 18, 14);
+  font-size: 24px;
+  font-weight: 500;
+  line-height: normal;
+  text-transform: uppercase;
+}
+.filters__main-item-icon {
+  margin-left: 15px;
+  @include adaptiveFull('width', 80, 54, 40);
+  @include adaptiveFull('height', 80, 54, 40);
+}
+.filters__more {
+}
+.filters__level {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0 -20px;
+
+  &:not(:last-child) {
+    @include adaptiveFull('margin-bottom', 30, 20, 10);
+  }
+
+  @include vp-767 {
+    display: none;
+  }
+}
+.filters__level-item {
+  margin: 0 20px;
+  @include adaptiveFull('font-size', 18, 14, 12);
+  text-transform: uppercase;
+  transition: $trans-default;
+
+  &.is-active {
+    @include adaptiveFull('font-size', 20, 16, 12);
+    font-weight: 500;
+  }
+}
+.filters__select {
+  display: none;
+
+  @include vp-767 {
+    display: block;
+  }
+}

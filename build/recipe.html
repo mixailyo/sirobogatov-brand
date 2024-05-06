@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="Сыробогатов">
+  <link rel="shortcut icon" href="favicon/favicon.png" type="image/x-icon">
+  <link rel="apple-touch-icon" href="favicon/favicon.png">
+  <script defer src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"></script>
+  <link rel="stylesheet" href="css/style.min.css">
+  <title>Сыробогатов — Рецепт</title>
+</head>
+
+<body>
+  <div style="display: none;">
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <symbol id="icon-close" viewBox="0 0 20 20">
+        <path d="M.293 18.291a1 1 0 101.414 1.414L10 11.413l8.292 8.292a1 1 0 101.414-1.414l-8.292-8.292 8.292-8.292A1 1 0 1018.291.293L9.999 8.585 1.707.293A1 1 0 10.293 1.707L8.585 10 .293 18.291z" />
+      </symbol>
+    </svg>
+  </div>
+  <div class="wrapper">
+    <header class="header">
+      <div class="container">
+        <a href="/" class="header__logo">
+          <img src="img/content/logo.svg" alt="" class="header__logo-img" width="240" height="36">
+        </a>
+        <nav class="header__menu">
+          <ul class="header__menu-list">
+            <li class="header__menu-item">
+              <a href="#" class="header__menu-link">О компании</a>
+            </li>
+            <li class="header__menu-item">
+              <a href="#" class="header__menu-link">Каталог</a>
+            </li>
+            <li class="header__menu-item">
+              <a href="#" class="header__menu-link">Рецепты</a>
+            </li>
+            <li class="header__menu-item">
+              <a href="#" class="header__menu-link">Производство</a>
+            </li>
+            <li class="header__menu-item">
+              <a href="#" class="header__menu-link">Где купить</a>
+            </li>
+            <li class="header__menu-item">
+              <a href="#" class="header__menu-link">контакты</a>
+            </li>
+            <li class="header__menu-item header__menu-item--mobile">
+              <div class="header__social">
+                <a href="#" class="header__social-link">
+                  <img src="img/content/social-1.svg" alt="" width="40" height="40">
+                </a>
+                <a href="#" class="header__social-link">
+                  <img src="img/content/social-2.svg" alt="" width="40" height="40">
+                </a>
+                <a href="#" class="header__social-link">
+                  <img src="img/content/social-3.svg" alt="" width="40" height="40">
+                </a>
+              </div>
+            </li>
+            <li class="header__menu-item header__menu-item--mobile margin-top-auto">
+              <a href="#" class="header__menu-link header__menu-link--primary">+7 (343) 311-00-00</a>
+            </li>
+            <li class="header__menu-item header__menu-item--mobile">
+              <a href="#" class="header__menu-link header__menu-link--primary">office@sirobogatov.ru</a>
+            </li>
+          </ul>
+        </nav>
+        <button class="header__hamburger">
+          <img src="img/content/burger.svg" alt="" class="header__hamburger-icon" width="45" height="45">
+          <img src="img/content/close.svg" alt="" class="header__hamburger-icon" width="45" height="45">
+        </button>
+      </div>
+    </header>
+    <main>
+      <section class="recipe">
+        <div class="recipe__slider swiper">
+          <div class="swiper-wrapper">
+            <div class="recipe__slide swiper-slide">
+              <img src="img/content/recipe.png" alt="" class="recipe__slide-photo">
+            </div>
+            <div class="recipe__slide swiper-slide">
+              <img src="img/content/recipe.png" alt="" class="recipe__slide-photo">
+            </div>
+            <div class="recipe__slide swiper-slide">
+              <img src="img/content/recipe.png" alt="" class="recipe__slide-photo">
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-navigation">
+            <button class="swiper-navigation__btn swiper-navigation__btn--prev"></button>
+            <button class="swiper-navigation__btn swiper-navigation__btn--next"></button>
+          </div>
+        </div>
+        <div class="recipe__text">
+          <h2 class="recipe__title">Сырный суп по-французски с плавленым сыром</h2>
+          <div class="recipe__info">
+            <div class="recipe__info-item">
+              <img src="img/content/icon-1.svg" alt="" class="recipe__info-item-icon">
+              <div class="recipe__info-item-name">1 час 10 мин.</div>
+            </div>
+            <div class="recipe__info-item">
+              <img src="img/content/icon-2.svg" alt="" class="recipe__info-item-icon">
+              <div class="recipe__info-item-name">5 порций</div>
+            </div>
+          </div>
+          <div class="recipe__ingredients">
+            <img src="img/content/recipe-ingredients.png" alt="" class="recipe__ingredients-photo">
+            <div class="recipe__ingredients-wrapper">
+              <h3 class="recipe__ingredients-title">Ингредиенты</h3>
+              <ul class="recipe__ingredients-list">
+                <li class="recipe__ingredients-item">
+                  <div class="recipe__ingredients-item-name">Сливочный плавленый сыр «Сыробогатов»</div>
+                  <div class="recipe__ingredients-item-value">200 г</div>
+                </li>
+                <li class="recipe__ingredients-item">
+                  <div class="recipe__ingredients-item-name">Картофель</div>
+                  <div class="recipe__ingredients-item-value">500 г</div>
+                </li>
+                <li class="recipe__ingredients-item">
+                  <div class="recipe__ingredients-item-name">Лук</div>
+                  <div class="recipe__ingredients-item-value">400 г</div>
+                </li>
+                <li class="recipe__ingredients-item">
+                  <div class="recipe__ingredients-item-name">Морковь</div>
+                  <div class="recipe__ingredients-item-value">150 г</div>
+                </li>
+                <li class="recipe__ingredients-item">
+                  <div class="recipe__ingredients-item-name">Сливочное масло</div>
+                  <div class="recipe__ingredients-item-value">180 г</div>
+                </li>
+                <li class="recipe__ingredients-item">
+                  <div class="recipe__ingredients-item-name">Соль, перец</div>
+                  <div class="recipe__ingredients-item-value">по вкусу</div>
+                </li>
+                <li class="recipe__ingredients-item">
+                  <div class="recipe__ingredients-item-name">Зелень</div>
+                  <div class="recipe__ingredients-item-value">по вкусу</div>
+                </li>
+                <li class="recipe__ingredients-item">
+                  <div class="recipe__ingredients-item-name">Лавровый лист</div>
+                  <div class="recipe__ingredients-item-value">по вкусу</div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="recipe__description">
+          <ul>
+            <li>В кастрюлю на 3 л положить мясо и налить воды. Как только бульон начнет кипеть, добавить 1 чайную ложку соли, пару горошков душистого перца и черного, 2–3 листика лаврового листа. Варить от момента закипания 20 минут. Затем мясо вынуть.</li>
+            <li>Картофель очистить и нарезать кубиками. Лук нарезать кубиками. Морковь натереть на терке. Мясо нарезать небольшими кусочками. Плавленый сыр (если в виде брусочка) натереть на терке или порезать кубиками.</li>
+            <li>В кипящий бульон добавить картофель. С момента закипания варить 5–7 минут.</li>
+            <li>В это время сделать слабую зажарку на сливочном масле. Сначала положить лук, затем морковь. Слегка посолить и поперчить. Готовую зажарку добавить в суп и варить еще 5–7 минут.</li>
+            <li>Затем добавить нарезанное мясо. Варить 3–4 минуты, добавить плавленый сыр, хорошенько перемешать и выключить огонь.</li>
+            <li>Перед подачей посыпать зеленью. По желанию подавать с гренками.</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer__wrapper">
+        <div class="container">
+          <button class="footer__up">
+            <img src="img/content/up.svg" alt="" class="footer__up-icon" width="60" height="60">
+          </button>
+        </div>
+      </div>
+      <div class="container">
+        <div class="footer__bottom">
+          <div class="footer__left">
+            <a href="/" class="footer__logo">
+              <img src="img/content/footer-logo.svg" alt="" class="footer__logo-img" width="180" height="53">
+            </a>
+            <div class="footer__social">
+              <a href="#" class="footer__social-link">
+                <img src="img/content/social-1.svg" alt="" class="footer__social-icon">
+              </a>
+              <a href="#" class="footer__social-link">
+                <img src="img/content/social-2.svg" alt="" class="footer__social-icon">
+              </a>
+              <a href="#" class="footer__social-link">
+                <img src="img/content/social-3.svg" alt="" class="footer__social-icon">
+              </a>
+            </div>
+            <div class="footer__copyright">
+              © 2024 Группа компаний «Сыробогатов». Все права защищены.
+            </div>
+          </div>
+          <div class="footer__right">
+            <a href="tel:+7 (343) 311 00 00" class="footer__phone">+7 (343) 311 00 00</a>
+            <a href="mailto:office@sirobogatov.ru" class="footer__email">office@sirobogatov.ru</a>
+            <div class="footer__address">Россия, 624093, Верхняя Пышма,<br> ул. Мичурина д. 7</div>
+            <a href="#" class="footer__document">Противодействие коррупции</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="modal modal--preload    " data-modal="feedback">
+      <div class="modal__wrapper">
+        <div class="modal__overlay" data-close-modal></div>
+        <div class="modal__content">
+          <p class="modal__description">Обычная модалка</p>
+          <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
+            <svg width="15" height="15">
+              <use xlink:href="#icon-close"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="modal modal--preload   modal--fit-content   modal--no-scale   modal--some-mod " data-modal="success">
+      <div class="modal__wrapper">
+        <div class="modal__overlay" data-close-modal></div>
+        <div class="modal__content">
+          <p class="modal__description">Размер этой модалки зависит от ширины контента,<br> отключена анимация-скейл и передан модификатор `some-mod`</p>
+          <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
+            <svg width="15" height="15">
+              <use xlink:href="#icon-close"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="js/vendor.min.js"></script>
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>

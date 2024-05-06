@@ -1,0 +1,65 @@
+<section class="contacts">
+  <div class="container">
+    <div class="contacts__video-wrapper video-wrapper">
+      <img src="img/content/video-preview.png" alt="" class="contacts__video-preview video-preview" width="960" height="800">
+      <video src="video/contacts.mp4" class="contacts__video video"></video>
+    </div>
+    <div class="contacts__wrapper">
+      <div class="contacts__top">
+        <h2 class="contacts__title title-h3">контакты</h2>
+        <ul class="contacts__list">
+          <li class="contacts__item contacts__item--phone contacts__item--main">
+            <div class="contacts__item-title">Центральный офис</div>
+            <a href="tel:+7 (343) 311-00-00" class="contacts__item-value">+7 (343) 311-00-00</a>
+          </li>
+          <li class="contacts__item contacts__item--phone">
+            <div class="contacts__item-title">Горячая линия</div>
+            <a href="tel:+7 (343) 311-00-00" class="contacts__item-value">+7 (343) 311-00-00</a>
+          </li>
+          <li class="contacts__item contacts__item--email">
+            <a href="mailto:office@sirobogatov.ru" class="contacts__item-value">office@sirobogatov.ru</a>
+          </li>
+          <li class="contacts__item contacts__item--phone">
+            <div class="contacts__item-title">Контроль качества</div>
+            <a href="tel:+7 (343) 311-00-00" class="contacts__item-value">+7 (343) 311-00-00</a>
+          </li>
+        </ul>
+      </div>
+      <div class="contacts__form form" data-form-validate data-callback="base">
+        <form method="post" novalidate>
+          <h2 class="form__title grid-column-2">Напишите нам</h2>
+          <div class="custom-input" data-validate-type="text" data-limitation="name" data-message-base="Поле обязательно к заполнению" data-message-extra="Проверьте корректность заполнения поля" data-required="">
+            <label>
+              <input type="text" name="user-name-1" class="" placeholder="Фамилия">
+            </label>
+          </div>
+          <div class="custom-input" data-validate-type="text" data-limitation="name" data-message-base="Поле обязательно к заполнению" data-message-extra="Проверьте корректность заполнения поля" data-required="">
+            <label>
+              <input type="text" name="user-name-2" class="" placeholder="Имя">
+            </label>
+          </div>
+          <div class="custom-input" data-validate-type="phone" data-on-input-validate="" data-message-base="Поле обязательно к заполнению" data-message-extra="Проверьте корректность заполнения поля" data-required="" data-phone-length="18">
+            <label>
+              <input type="tel" name="user-phone" placeholder="Телефон">
+            </label>
+          </div>
+          <div class="custom-input" data-validate-type="text" data-message-base="Поле обязательно к заполнению" data-required="">
+            <label>
+              <input type="text" name="message" class="" placeholder="Сообщение">
+            </label>
+          </div>
+          <div class="form__footer grid-column-2">
+            <button class="form__submit btn btn--dark" type="submit">Отправить</button>
+            <div class="form__agreement">Нажимая кнопку, Вы соглашаетесь с нашей <a href="#" target="_blank">политикой обработки персональных данных</a></div>
+          </div>
+        </form>
+        <div class="form__success">
+          <button class="form__success-close">
+            <img src="img/content/close-white.svg" alt="" class="form__success-close-icon" width="15" height="15">
+          </button>
+          <p class="form__success-text title-h4">Ваше сообщение успешно отправлено.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
